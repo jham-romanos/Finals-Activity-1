@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elle's Profile Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3e8ff;
+        }
+
+        header, footer {
+            background-color: #d8b4fe;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #c084fc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav label {
+            background: white;
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        nav label:hover {
+            background-color: #ede9fe;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #a855f7;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #9333ea;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #a855f7;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        /* Hide all sections */
+        .content-section {
+            display: none;
+        }
+
+        /* Show selected section */
+        #home:checked ~ #mainPage #homeSection,
+        #about:checked ~ #mainPage #aboutSection,
+        #skills:checked ~ #mainPage #skillsSection,
+        #contact:checked ~ #mainPage #contactSection {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="radio" name="nav" id="home" checked hidden>
+    <input type="radio" name="nav" id="about" hidden>
+    <input type="radio" name="nav" id="skills" hidden>
+    <input type="radio" name="nav" id="contact" hidden>
+
+    <div id="mainPage">
+
+        <header>
+            <h1>Elle's Personal Profile</h1>
+        </header>
+
+        <nav>
+            <label for="home">Home</label>
+            <label for="about">About</label>
+            <label for="skills">Skills</label>
+            <label for="contact">Contact</label>
+        </nav>
+
+        <div class="container">
+		
+			<section id="homeSection" class="content-section">
+            <img src="jham.jpg" alt="Elle">
+                <p style="text-align:center;">Hello! I'm Jhamelle Romanos, a BSIT first-year student.</p>
+				     <h2> <p style="text-align:center;"> Welcome to My Page!</h2>
+
+				
+            </section>
+
+            <section id="aboutSection" class="content-section">
+                <h2>About Me</h2>
+                <p>Hi I'm Jham — I lived in Taguig and I have a lot of hobbies, also I'm a beginner in web development. I enjoy learning basic HTML and creating simple web pages.I really want to improve my skills and become a better web developer in the future.</p>
+            </section>
+
+            <section id="skillsSection" class="content-section">
+                <h2>My Skills</h2>
+                <table>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Beginner</td>
+                    </tr>
+					 <tr>
+                        <td>Animation</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Beginner</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="contactSection" class="content-section">
+                <h2>Contact Me</h2>
+                <form>
+                    Name:
+                    <input type="text" name="name">
+
+                    Email:
+                    <input type="email" name="email">
+
+                    Message:
+                    <textarea name="message"></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Elle's Personal Profile Page</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elle's Status</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3e8ff;
+        }
+
+        header, footer {
+            background-color: #d8b4fe;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #c084fc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav label {
+            background: white;
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        nav label:hover {
+            background-color: #ede9fe;
+        }
+
+        section {
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #a855f7;
+            color: white;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button, .btn-label {
+            background-color: #a855f7;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        button:hover, .btn-label:hover {
+            background-color: #9333ea;
+        }
+
+        /* Hide sections */
+        .content-section {
+            display: none;
+        }
+
+        /* Show selected */
+        #home:checked ~ #mainPage #homeSection,
+        #table:checked ~ #mainPage #tableSection,
+        #form:checked ~ #mainPage #formSection,
+        #thanks:checked ~ #mainPage #thanksSection {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="radio" name="nav" id="home" checked hidden>
+    <input type="radio" name="nav" id="table" hidden>
+    <input type="radio" name="nav" id="form" hidden>
+    <input type="radio" name="nav" id="thanks" hidden>
+
+    <div id="mainPage">
+
+        <header>
+            <h1>Elle's Status</h1>
+        </header>
+        <nav>
+            <label for="home">Home</label>
+            <label for="table">Table</label>
+            <label for="form">Form</label>
+        </nav>
+
+        <div class="container">
+
+            <section id="homeSection" class="content-section">
+                <h2>Elle's Profile</h2>
+
+                <a href="file:///C:/Users/jhamr/OneDrive/Documents/Lab3/Elles%20Personal%20Page.html" target="_blank">
+                    <img src="jham.jpg" alt="Elle">
+                </a>
+
+                <p>Click the image to open Elle's Personal Website.</p>
+            </section>
+
+            <section id="tableSection" class="content-section">
+                <h2>My Status</h2>
+
+                <table>
+                    <tr>
+                        <th>Category:</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Romanos, Jhamelle G.</td>
+                    </tr>
+                    <tr>
+                        <td>Age:</td>
+                        <td>19 yrs old</td>
+                    </tr>
+                    <tr>
+                        <td>Course:</td>
+                        <td>BS Information Technology</td>
+                    </tr>
+					<tr>
+                        <td>Year Level:</td>
+                        <td>1st Year</td>
+                    </tr>
+					<tr>
+                        <td>Status in HTML:</td>
+                        <td>Beginner</td>
+                    </tr>
+					<tr>
+                        <td>Goal:</td>
+                        <td>To be a well skilled web developer and a successful person in my prefered industry.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- FORM -->
+            <section id="formSection" class="content-section">
+                <h2>Contact Form</h2>
+
+                <form>
+                    Name:
+                    <input type="text" name="name" required>
+					
+					 Age:
+                    <input type="age" name="age" required>
+
+                    Email:
+                    <input type="email" name="email" required>
+
+                    Message:
+                    <textarea name="message" required></textarea>
+
+                    <button type="button" onclick="document.getElementById('thanks').checked = true;">
+                        Submit
+                    </button>
+                </form>
+            </section>
+
+            <section id="thanksSection" class="content-section">
+                <h2>Thank You!</h2>
+                <p>Your form has been submitted.</p>
+
+                <label for="home" class="btn-label">Back to Home</label>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Elle's Status</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
